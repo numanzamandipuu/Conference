@@ -40,7 +40,7 @@
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
-  --background-color: #f3f9ff;
+  --background-color: #e8f5ff;
   --surface-color: #ffffff;
 }
 
@@ -1651,6 +1651,7 @@ section,
 }
 
 /*--------------------------------------------------------------
+/*--------------------------------------------------------------
 # Stats Section
 --------------------------------------------------------------*/
 .stats .stats-item {
@@ -1666,9 +1667,20 @@ section,
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
+  white-space: nowrap; /* keep number and + together */
 }
 
-.stats .stats-item span:after {
+/* plus sign after the number */
+.stats .stats-item span::after {
+  content: "+";
+  margin-left: 0.1em;
+  font-weight: 700;
+  color: var(--heading-color);
+  position: relative;
+}
+
+/* underline bar */
+.stats .stats-item span::before {
   content: "";
   position: absolute;
   display: block;
@@ -1689,7 +1701,6 @@ section,
   font-weight: 500;
 }
 
-/*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
 .services .service-card {
@@ -2321,6 +2332,8 @@ section,
   margin-right: 8px;
   color: var(--accent-color);
 }
+
+
 
 /*--------------------------------------------------------------
 # Starter Section Section
