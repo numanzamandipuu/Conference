@@ -1583,7 +1583,7 @@ section,
 }
 
 .testimonials .testimonial-item .testimonial-img {
-  width: 90px;
+  width: 100px;
   border-radius: 50px;
   border: 6px solid var(--background-color);
   float: left;
@@ -2838,5 +2838,51 @@ section,
 }
 
 .team-members .team-members-member .social a+a {
+  margin-left: 8px;
+}
+
+
+/* Keynote Team Members */
+
+.keynote-members .team-members-member .social {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 100%;
+}
+
+@media (max-width: 468px) {
+  .keynote-members .team-members-member .social {
+    justify-content: center;
+  }
+}
+
+.keynote-members .team-members-member .social a {
+  background: color-mix(in srgb, var(--default-color), transparent 94%);
+  transition: ease-in-out 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  width: 36px;
+  height: 36px;
+}
+
+.keynote-members .team-members-member .social a i {
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  font-size: 16px;
+  margin: 0 2px;
+}
+
+.keynote-members .team-members-member .social a:hover {
+  background: var(--accent-color);
+}
+
+.keynote-members .team-members-member .social a:hover i {
+  color: var(--contrast-color);
+}
+
+.keynote-members .team-members-member .social a+a {
   margin-left: 8px;
 }
