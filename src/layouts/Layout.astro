@@ -2,6 +2,7 @@
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Analytics from '@vercel/analytics/astro';
+import  SpeedInsights  from "@vercel/speed-insights/astro"
 const { title = "ISEE 2026", bodyClass = "" } = Astro.props;
 ---
 
@@ -46,6 +47,7 @@ const { title = "ISEE 2026", bodyClass = "" } = Astro.props;
   </main>
 
   <Analytics />
+  <SpeedInsights/>
 
   <Footer />
 
