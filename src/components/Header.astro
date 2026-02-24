@@ -1,0 +1,63 @@
+---
+const currentPath = Astro.url.pathname;
+---
+
+<header id="header" class="header d-flex align-items-center fixed-top">
+  <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+    <a href="/" class="logo d-flex align-items-center me-auto me-xl-0">
+      <img src="https://i.ibb.co.com/ksBLP0L0/image-3.png" alt="">
+      <h1 class="sitename">ISEE</h1>
+    </a>
+
+    <nav id="navmenu" class="navmenu">
+<ul>
+  <li>
+    <a href="/" class={currentPath === "/" ? "active" : ""}>
+      Home
+    </a>
+  </li>
+
+  <li>
+    <a href="/Submission" class={currentPath === "/Submission" ? "active" : ""}>
+      Submission
+    </a>
+  </li>
+
+  <li>
+    <a href="/Registration" class={currentPath === "/Registration" ? "active" : ""}>
+      Registration
+    </a>
+  </li>
+
+  <li>
+    <a href="/Best_Paper" class={currentPath === "/Best_Paper" ? "active" : ""}>
+      Best Paper Award
+    </a>
+  </li>
+
+  <li>
+    <a href="/Keynote" class={currentPath === "/Keynote" ? "active" : ""}>
+      Keynote Speakers
+    </a>
+  </li>
+
+  <li>
+    <a href="/Committee" class={currentPath === "/Committee" ? "active" : ""}>
+      Committee
+    </a>
+  </li>
+
+  <li>
+    <a href="/Contact" class={currentPath === "/Contact" ? "active" : ""}>
+      Contact
+    </a>
+  </li>
+</ul>
+      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+    </nav>
+
+    <a class="btn-getstarted" href="/Registration">Register Now</a>
+
+  </div>
+</header>
