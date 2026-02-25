@@ -1,63 +1,70 @@
 ---
-const currentPath = Astro.url.pathname;
+const { active = "" } = Astro.props;
 ---
 
 <header id="header" class="header d-flex align-items-center fixed-top">
   <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
+    <!-- Logo -->
     <a href="/" class="logo d-flex align-items-center me-auto me-xl-0">
-      <img src="https://i.ibb.co.com/ksBLP0L0/image-3.png" alt="">
+      <img src="/assets/img/logo.png" alt="ISEE Logo">
       <h1 class="sitename">ISEE</h1>
     </a>
 
+    <!-- Navigation -->
     <nav id="navmenu" class="navmenu">
-<ul>
-  <li>
-    <a href="/" class={currentPath === "/" ? "active" : ""}>
-      Home
-    </a>
-  </li>
+      <ul>
+        <li>
+          <a href="/" class={active === "home" ? "active" : ""}>
+            Home
+          </a>
+        </li>
 
-  <li>
-    <a href="/Submission" class={currentPath === "/Submission" ? "active" : ""}>
-      Submission
-    </a>
-  </li>
+        <li>
+          <a href="/Submission" class={active === "submission" ? "active" : ""}>
+            Submission
+          </a>
+        </li>
 
-  <li>
-    <a href="/Registration" class={currentPath === "/Registration" ? "active" : ""}>
-      Registration
-    </a>
-  </li>
+        <li>
+          <a href="/Registration" class={active === "registration" ? "active" : ""}>
+            Registration
+          </a>
+        </li>
 
-  <li>
-    <a href="/Best_Paper" class={currentPath === "/Best_Paper" ? "active" : ""}>
-      Best Paper Award
-    </a>
-  </li>
+        <li>
+          <a href="/Best_Paper" class={active === "best-paper" ? "active" : ""}>
+            Best Paper Award
+          </a>
+        </li>
 
-  <li>
-    <a href="/Keynote" class={currentPath === "/Keynote" ? "active" : ""}>
-      Keynote Speakers
-    </a>
-  </li>
+        <li>
+          <a href="/Keynote" class={active === "keynote" ? "active" : ""}>
+            Keynote Speakers
+          </a>
+        </li>
 
-  <li>
-    <a href="/Committee" class={currentPath === "/Committee" ? "active" : ""}>
-      Committee
-    </a>
-  </li>
+        <li>
+          <a href="/Committee" class={active === "committee" ? "active" : ""}>
+            Committee
+          </a>
+        </li>
 
-  <li>
-    <a href="/Contact" class={currentPath === "/Contact" ? "active" : ""}>
-      Contact
-    </a>
-  </li>
-</ul>
+        <li>
+          <a href="/Contact" class={active === "contact" ? "active" : ""}>
+            Contact
+          </a>
+        </li>
+      </ul>
+
+      <!-- Mobile Toggle -->
       <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
     </nav>
 
-    <a class="btn-getstarted" href="/Registration">Register Now</a>
+    <!-- CTA Button -->
+    <a class="btn-getstarted" href="/registration">
+      Register Now
+    </a>
 
   </div>
 </header>
