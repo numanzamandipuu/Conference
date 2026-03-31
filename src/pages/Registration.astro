@@ -70,6 +70,73 @@ import Layout from "../layouts/Layout.astro";
             </div>
         </section>
 
+        <section id="contact" class="contact section light-background">
+
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+            <h2>Registration Form</h2>
+
+        </div><!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="row g-4 g-lg-5">
+            <div class="col">
+                <div class="contact-form" data-aos="fade-up" data-aos-delay="300">
+
+                <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+                    <div class="row gy-4">
+
+                    <div class="col-md-6">
+                        <input type="text" name="full_name" class="form-control" placeholder="Full Name" required>
+                    </div>
+
+                    <div class="col-md-6 ">
+                        <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+                    </div>
+
+                    <div class="col-md-6">
+                        <input type="text" name="institution" class="form-control" placeholder="Institution/Organization Name" required>
+                    </div>
+
+                    <div class="col-md-6">
+                        <input type="tel" name="phone" class="form-control" placeholder="Phone Number (WhatsApp preferred)" required>
+                    </div>
+
+                    <div class="col-md-6">
+                        <input type="text" name="designation" class="form-control" placeholder="Designation" required>
+                    </div>
+
+                    <div class="col-12">
+                        <label class="form-label">Upload Your Payment Slip *</label>
+                        <input 
+                        type="file" 
+                        name="voucher" 
+                        class="form-control" 
+                        accept=".pdf,.jpg,.jpeg,.png"
+                        required
+                        >
+                        <small class="text-muted">Max file size: 10MB</small>
+                    </div>
+
+                    <div class="col-12 text-center">
+                        <button type="submit" class="btn">
+                        Submit Registration
+                        </button>
+                    </div>
+
+                    </div>
+                </form>
+
+                </div>
+            </div>
+
+            </div>
+
+        </div>
+
+        </section><!-- /Contact Section -->
+
         <section id="features-cards" class="features-card section" data-aos="fade-up">
 
 

@@ -1,8 +1,8 @@
 /* Fonts */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Nunito",  sans-serif;
-  --nav-font: "Inter",  sans-serif;
+  --default-font: "Cabin", sans-serif;
+  --heading-font: "Cabin", sans-serif;
+  --nav-font: "Cabin", sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
