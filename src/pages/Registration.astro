@@ -103,12 +103,37 @@ import Layout from "../layouts/Layout.astro";
                         <input type="tel" name="phone" class="form-control" placeholder="Phone Number (WhatsApp preferred)" required>
                     </div>
 
+                    
                     <div class="col-md-6">
-                        <input type="text" name="designation" class="form-control" placeholder="Designation" required>
+                    <select name="participant_type" class="form-control" required>
+                        
+                        <option value="" disabled selected hidden>
+                        Select Participant Type
+                        </option>
+
+                        <optgroup label="Local">
+                        <option value="local_author">Local Author</option>
+                        <option value="local_student">Student (Local)</option>
+                        <option value="industry_professional">Industry Professional (Non-Author)</option>
+                        <option value="accompanying_person">Accompanying Person</option>
+                        </optgroup>
+
+                        <optgroup label="International">
+                        <option value="international_delegate">International Delegate</option>
+                        <option value="saarc_participant">SAARC Participant</option>
+                        <option value="foreign_student">Student (Foreign)</option>
+                        </optgroup>
+
+                    </select>
+                    </div>
+                    
+
+                    <div class="col-md-6">
+                        <input type="text" name="trxid" class="form-control" placeholder="Transaction ID (For Mobile Banking)">
                     </div>
 
                     <div class="col-12">
-                        <label class="form-label">Upload Your Payment Slip *</label>
+                        <label class="form-label">Upload Your Payment Slip</label>
                         <input 
                         type="file" 
                         name="voucher" 
@@ -144,14 +169,113 @@ import Layout from "../layouts/Layout.astro";
                 <div class="container section-title pb-0" data-aos="fade-up">
                     <h2>Payment System</h2>
                 </div>
-                <p style="text-align: justify;">All conference participants must be registered. Pre-registered
-                    participants will be assured of being given the entire conference material package upon their
-                    arrival in the conference venue. Advance registrations are preferable because of better planning of
-                    the technical sessions and social events of the conference. Onsite registration is strongly
-                    discouraged. Registration fee is not refundable upon registration has been completed.</p>
+                <div class="payment-content">
+
+                <p>
+                    All participants must complete registration and payment to confirm participation. 
+                    After making the payment, please upload the payment slip or transaction proof in the registration form.
+                </p>
+
+                <!-- Mobile Banking -->
+                <h3>Mobile Banking (bKash / Nagad / Rocket)</h3>
+
+                <div class="row">
+
+                    <!-- LEFT: Payment Details -->
+                    <div class="col-md-6">
+                    <h5><strong>Payment Details:</strong></h5>
+                    <ul>
+                        <li><strong>Account Type:</strong> Personal</li>
+                        <li><strong>Account Name:</strong> Robel Ahmed </li>
+                        <li><strong>bKash / Nagad / Rocket Number:</strong> 01521314108</li>
+                        <li><strong>Cash out charge</strong> need to be included.</li>
+                    </ul>
+                    </div>
+
+                    <!-- RIGHT: Instructions -->
+                    <div class="col-md-6">
+                    <h5><strong>Instructions:</strong></h5>
+                    <ul>
+                        <li>Select <strong>“Send Money”</strong></li>
+                        <li>Enter the correct amount with cash out charge</li>
+                        <li>Use your <strong>Full Name</strong> as reference</li>
+                        <li>Save the transaction ID (TrxID)</li>
+                    </ul>
+                    </div>
+
+                </div>
+
+                <!-- Bank Transfer -->
+                <h3 class="mt-4">Bank Transfer</h3>
+
+                <div class="row">
+
+                    <!-- LEFT: Bank Details -->
+                    <div class="col-md-6">
+                    <h5><strong>Bank Details:</strong></h5>
+                    <ul>
+                        <li><strong>Bank Name:</strong> Rupali Bank PLC </li>
+                        <li><strong>Account Number:</strong> 3723010015789 </li>
+                        <li><strong>Branch Name:</strong> RUET Corporate Branch </li>
+                        <li><strong>Routing Number:</strong> 185812171 </li>
+                    </ul>
+                    </div>
+
+                    <!-- RIGHT: Instructions -->
+                    <div class="col-md-6">
+                    <h5><strong>Instructions:</strong></h5>
+                    <ul>
+                        <li>Transfer the exact registration fee</li>
+                        <li>Keep the deposit slip / receipt</li>
+                        <li>Enter transaction reference in the form</li>
+                        <li>Upload proof during registration</li>
+                    </ul>
+                    </div>
+
+                </div>
+
+                
+                <h3 class="mt-4">Registration Fees (Including cashout charge)</h3>
+
+                    
+                <div class="container" data-aos="fade-up">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">Category</th>
+                                <th scope="col">Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Local Authors</td>
+                                <td>BDT 6120</td>
+                            </tr>
+                            <tr>
+                                <td>Students (Local)</td>
+                                <td>BDT 3570</td>
+                            </tr>
+                            <tr>
+                                <td>Industry professionals (Non-Authors)</td>
+                                <td>BDT 8160</td>
+                            </tr>
+                            <tr>
+                                <td>Accompanying Person</td>
+                                <td>BDT 2040</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="mt-3">
+                        <p><strong>Additional paper submission:</strong> +20% fee each</p>
+                        <p><strong>After early bird (22 July 2026):</strong> Registration +20% extra</p>
+                    </div>
+                </div>
+
+                </div>
             </div>
 
-            <div class="container my-5" data-aos="fade-up" data-aos-delay="400">
+            <!-- <div class="container my-5" data-aos="fade-up" data-aos-delay="400">
                 <div class="row justify-content-center">
                     <div class="col-12 col-sm-6 col-md-4 text-center">
                         <button class="btn custom-btn">
@@ -159,7 +283,7 @@ import Layout from "../layouts/Layout.astro";
                         </button>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
 
 
